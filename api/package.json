@@ -7,13 +7,17 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "start-test",
-    "start": "nodemon index.js",
+    "start": "nodemon index.js"
   },
   "dependencies": {
+    "dotenv": "^17.2.0",
     "express": "^5.1.0",
+    "mysql2": "^3.14.2",
     "node": "^20.19.4",
     "react": "^19.1.0"
   },
-  "keywords": []
+  "keywords": [],
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
 }

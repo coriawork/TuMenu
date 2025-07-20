@@ -1,6 +1,19 @@
-const usuarios = [
-  { id: 1, nombre: "Juan" },
-  { id: 2, nombre: "Ana" },
-];
+const { DataTypes } = require('sequelize');
+const sequelize = require('../config/database'); // Ajusta la ruta según tu estructura
 
-module.exports = usuarios;
+const Usuario = sequelize.define('Usuario', {
+    id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true
+    },
+    nombre: {
+        type: DataTypes.STRING,
+        allowNull: false
+    }
+}, {
+    tableName: 'usuarios',
+    timestamps: false
+});
+
+module.exports = Usuario;

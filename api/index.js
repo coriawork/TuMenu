@@ -8,7 +8,7 @@ app.use(express.json());
 app.use('/usuarios', usuarioRoutes);
 
 // Servidor
-const PORT = 3000;
+const PORT = 8000;
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
