@@ -1,42 +1,24 @@
 {
   "name": "api",
   "version": "1.0.0",
-  "description": "app de menus",
-  "license": "ISC",
-  "author": "Manuel Coria",
-  "type": "commonjs",
+  "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "nodemon index.js",
-    "db:create": "sequelize-cli db:create",
-    "db:drop": "sequelize-cli db:drop",
-    "db:migrate": "sequelize-cli db:migrate",
-    "db:migrate:undo": "sequelize-cli db:migrate:undo",
-    "db:migrate:undo:all": "sequelize-cli db:migrate:undo:all",
-    "db:seed": "sequelize-cli db:seed:all",
-    "db:seed:undo": "sequelize-cli db:seed:undo:all",
-    "migration:create": "sequelize-cli migration:generate --name",
-    "seed:create": "sequelize-cli seed:generate --name",
-    "migrate": "node cli.js migrate",
-    "rollback": "node cli.js rollback",
-    "migration:status": "node cli.js status",
-    "migration:new": "node cli.js create",
-    "db:init": "node -e \"require('./database/initializer').DatabaseInitializer().initialize()\"",
-    "db:reset": "node -e \"require('./database/initializer').DatabaseInitializer().reset()\"",
-    "db:setup": "npm run db:init && npm run db:seed"
+    "dev": "nodemon src/index.js"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "dotenv": "^17.2.0",
     "express": "^5.1.0",
+    "mariadb": "^3.4.4",
+    "morgan": "^1.10.1",
     "mysql2": "^3.14.2",
-    "node": "^20.19.4",
-    "react": "^19.1.0",
-    "sequelize": "^6.37.7",
-    "umzug": "^3.8.2"
+    "sequelize": "^6.37.7"
   },
-  "keywords": [],
   "devDependencies": {
-    "nodemon": "^3.1.10",
-    "sequelize-cli": "^6.6.3"
+    "nodemon": "^3.1.10"
   }
 }
