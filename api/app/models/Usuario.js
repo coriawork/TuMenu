@@ -1,5 +1,5 @@
 const { DataTypes } = require('sequelize');
-const sequelize = require('../config/database'); // Ajusta la ruta según tu estructura
+const sequelize = require('../../config/db'); // Ajusta la ruta según tu estructura
 
 const Usuario = sequelize.define('Usuario', {
     id: {
@@ -10,10 +10,24 @@ const Usuario = sequelize.define('Usuario', {
     nombre: {
         type: DataTypes.STRING,
         allowNull: false
+    },
+    email: {
+        type: DataTypes.STRING,
+        allowNull: true,
+        unique: true
+    },
+    telefono: {
+        type: DataTypes.STRING,
+        allowNull: true
+    },
+    activo: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: true,
+        allowNull: false
     }
 }, {
     tableName: 'usuarios',
-    timestamps: false
+    timestamps: true
 });
 
 module.exports = Usuario;
